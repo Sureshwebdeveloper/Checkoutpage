@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="icon" href="./devchallenges.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Checkout</h1>
+    </header>
+    <section class="container">
+      <div class="form-all">
+        <form class="input-icons">
+          <div class="contact-information">
+            <h2>Contact inforamtion</h2>
+            <label for="Email">Email</label>
+            <br />
+            <span class="material-icons"> email </span>
+            <input
+              type="email"
+              placeholder="Enter Your email..."
+              class="input-field"
+              id="email"
+              required
+            />
+            <br />
+            <label for="tel">Phone</label>
+            <br />
+            <span class="material-icons"> phone </span>
+            <input
+              type="tel"
+              placeholder="Enter Your phone ..."
+              class="input-field"
+              id="tel"
+              required
+            />
+          </div>
+
+          <h2>Shipping address</h2>
+          <label for="name">Full name</label>
+          <br />
+          <span class="material-icons"> account_circle </span>
+          <input
+            type="text"
+            value="Rodney Cotton"
+            class="input-field"
+            id="name"
+          />
+          <br />
+          <label for="address">Address</label>
+          <br />
+          <span class="material-icons"> home </span>
+          <input
+            type="text"
+            placeholder="Your address.."
+            class="input-field"
+            id="address"
+            required
+          />
+          <br />
+          <label for="city">City</label>
+          <br />
+          <span class="material-icons"> location_city </span>
+          <input
+            type="text"
+            placeholder="Your City.."
+            class="input-field"
+            id="city"
+            required
+          />
+
+          <div class="section-two">
+            <div class="country-postalcode">
+              <label for="country">Country</label>
+              <br />
+              <span class="material-icons"> public </span>
+              <select name="country" id="country" class="input-field" required>
+                <option value="select">Your Country</option>
+                <option value="india">India</option>
+                <option value="usa">Usa</option>
+                <option value="">Russia</option>
+                <option value="england">England</option>
+              </select>
+            </div>
+            <div class="postalcode">
+              <label for="postalcode">Postalcode</label>
+              <br />
+              <span class="material-icons"> markunread_mailbox </span>
+              <input
+                type="number"
+                placeholder="Your Postal Code.."
+                name="postalcode"
+                id="postalcode"
+                class="input-field"
+                required
+              />
+            </div>
+          </div>
+          <input type="checkbox" />Save this inforamtion for next time
+          <button
+            class="btn-main"
+            type="submit"
+            id="submit-btn"
+            onclick="submit()"
+          >
+            Contiune
+          </button>
+        </form>
+      </div>
+
+      <div class="order-section">
+        <div class="order-1">
+          <div class="img-container">
+            <img src="photo1.png" alt="vintagebackbag" />
+            <div class="text">
+              <h3>Vintage Backbag</h3>
+              <p class="price">$54.99 <s class="strike">$94.99</s></p>
+              <div class="btn-container">
+                <button id="decrement" class="decrement">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24"
+                    viewBox="0 -960 960 960"
+                    width="24"
+                  >
+                    <path d="M200-440v-80h560v80H200Z" />
+                  </svg>
+                </button>
+                <p class="count" id="quantity">1</p>
+                <button class="increment" id="increment">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24"
+                    viewBox="0 -960 960 960"
+                    width="24"
+                  >
+                    <path
+                      d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="order-2">
+            <div class="img-container">
+              <img src="photo2.png" alt="LevisShooes" />
+              <div class="text">
+                <h3>Levi Shoes</h3>
+                <p class="price">$74.99 <s class="strike">$124.99</s></p>
+                <div class="btn-container">
+                  <button class="decrement" id="decrement-two">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24"
+                      viewBox="0 -960 960 960"
+                      width="24"
+                    >
+                      <path d="M200-440v-80h560v80H200Z" />
+                    </svg>
+                  </button>
+                  <p class="count" id="count-value">1</p>
+                  <button class="increment" id="increment-two">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24"
+                      viewBox="0 -960 960 960"
+                      width="24"
+                    >
+                      <path
+                        d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cart-total">
+          <hr />
+          <h2>Shipping <span class="total">$19</span></h2>
+          <hr />
+          <h2>Total <span class="total">$148.98</span></h2>
+        </div>
+      </div>
+    </section>
+    <script src="index.js"></script>
+  </body>
+</html>
